@@ -99,7 +99,7 @@ impl Camera {
         for j in 0..self.image_height {
             pb.set_position(j as u64);
             let mut line_pixel_color = Arc::new(Mutex::new(Vec::new()));
-            for i in 0..self.image_height {
+            for i in 0..self.image_width {
                 line_pixel_color.lock().unwrap().push(Vector3::new(0.0,0.0,0.0));
             }
             let thread_num:i64 = 28;
